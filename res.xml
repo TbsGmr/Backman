@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<messages>
+    <message id="overviewday">
+        <nav>
+            ${navbar}
+        </nav>
+        <div class="container">
+          ${tabbar}
+        </div>
+    </message>
+</messages>
