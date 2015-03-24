@@ -8,4 +8,10 @@
           ${tabbar}
         </div>
     </message>
+    <message id="bestellung">
+        <div class="row">
+       		<div class="col-md-6">${kundenname}</div>
+  			<div class="col-md-6">${irgendwas}</div>
+        </div>
+    </message>
 </messages>
