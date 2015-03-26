@@ -6,7 +6,7 @@
 #include <Wt/WBootstrapTheme>
 #include <Wt/WTemplate>
 #include <Wt/WTextArea>
-#include <Wt/WLineEdit>
+
 
 using namespace Wt;
 

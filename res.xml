@@ -9,9 +9,13 @@
         </div>
     </message>
     <message id="bestellung">
+        <div style="margin-top:2em"></div>
         <div class="row">
-       		<div class="col-md-6">${kundenname}</div>
-  			<div class="col-md-6">${irgendwas}</div>
+       		<div class="col-md-1">${k_auswahl}</div>
+  			  <div class="col-md-6">${kundenname}</div>
+          <div class="col-md-1">${bezahlt}</div>
+          <div class="col-md-2">${neue_bestellung}</div>
+          <div class="col-md-2">${entfernen}</div>
         </div>
     </message>
 </messages>

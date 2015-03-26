@@ -1,5 +1,6 @@
 #include <Wt/WApplication>
 #include "day_ata_glance.h"
+#include "bestellung.h"
 
 DayAtaGlance::DayAtaGlance(const WEnvironment& env)
     : WApplication(env)
@@ -20,6 +21,8 @@ DayAtaGlance::DayAtaGlance(const WEnvironment& env)
     navigation->setTitle(WString("Bestellung fuer den 01.01.01"), WLink(WLink::InternalPath, "/selectday/"));
 
     tabbar = new WTabWidget();
+    
+    tabbar->addTab(new Bestellung(), "Bestellung", WTabWidget::PreLoading);
     tabbar->addTab(new WTextArea("Hello World 2"), "Uebersicht", WTabWidget::LazyLoading);
     tabbar->addTab(new WTextArea("This is my first tab here"), "Bestand", WTabWidget::LazyLoading);
     tabbar->addTab(new WTextArea("This is my first tab here"), "Einstellungen", WTabWidget::LazyLoading);
@@ -29,11 +32,4 @@ DayAtaGlance::DayAtaGlance(const WEnvironment& env)
 
     root()->addWidget(tmpl);
 
-    WTemplate* bestellung = new WTemplate(WString::tr("bestellung"));
-
-    Wt::WLineEdit *name = new Wt::WLineEdit();
-    bestellung->bindWidget("kundenname", name);
-    bestellung->bindWidget("irgendwas", new Wt::WLineEdit());
-    name->setEmptyText("Kundenname");
-    tabbar->addTab(bestellung, "Bestellung", WTabWidget::PreLoading);
 }
